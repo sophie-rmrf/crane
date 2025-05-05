@@ -118,6 +118,7 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp17</LanguageStandard>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -129,10 +130,11 @@
   <ItemGroup>
     <ClCompile Include="crane.cpp" />
     <ClCompile Include="config.cpp" />
-    <ClCompile Include="deps\lang.cpp" />
+    <ClCompile Include="lang.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="deps\json.hpp" />
+    <ClInclude Include="headers\config.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
