@@ -1,4 +1,5 @@
 #include <fstream>
+#include <string>
 #include "deps/json.hpp"
 
 // Relative path to the config
@@ -15,11 +16,23 @@ namespace config {
 			return false;
 		}
 		
-		bool containsDebugProfile = conf_json.contains("debug");
-		bool containsReleaseProfile = conf_json.contains("release");
+		if (!conf_json.contains("profiles")) {
+			return false;
+		}
 
-		return containsDebugProfile || containsReleaseProfile;
+		nlohmann::json conf_profiles = conf_json["profiles"];
+		
+		bool contains_debug_profile = conf_profiles.contains("debug");
+		bool contains_release_profile = conf_profiles.contains("release");
+
+		return contains_debug_profile || contains_debug_profile;
 	}
 
+	std::string to_gcc_command() {
 
+	}
+
+	std::string to_msvc_command() {
+
+	}
 }
