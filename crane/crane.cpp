@@ -6,7 +6,7 @@
 int main(int argc, char* argv[]) {
 	setlocale(LC_ALL, "Russian");
 	std::string arg1(argv[1]);
-	std::string arg2(argv[2]);
+	
 
 
 	std::ifstream conf_file(std::filesystem::absolute("config.crane.json"));
@@ -28,6 +28,7 @@ int main(int argc, char* argv[]) {
 		config::generic::install_gcc();
 	}
 	else if (arg1 == "run") {
+		std::string arg2(argv[2]);
 		system((config::gcc::to_command(conf_json, arg2, true)).c_str());
 	}
 }
