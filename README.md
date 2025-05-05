@@ -6,6 +6,8 @@ Crane can also install `g++` compiler for you.
 
 ## How to use
 
+If you do not have a compiler, run the `crane setup` command. (cmd must be run as Administrator)
+
 You need the `config.crane.json` file to work with Crane.
 
 Example of that file:
