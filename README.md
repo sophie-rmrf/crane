@@ -29,3 +29,5 @@ Example of that file:
     }
 }
 ```
+
+To run Crane projects, you must use the `crane run <profile>` command, where `<profile>` is the name of the profile in the configuration. For example, `crane run debug` or `crane run release`.
